@@ -45,6 +45,12 @@ UI::show_box_top(T_('Search Ampache') . "...", 'box box_advanced_search');
     } else {
         echo T_('Videos');
     } ?></td>
+        <td><?php if ($_REQUEST['type'] != 'year') {
+        ?><a href="<?php echo AmpConfig::get('web_path'); ?>/search.php?type=year"><?php echo T_('Year'); ?></a><?php
+    } else {
+        echo T_('Year');
+    } ?></td>
+
     </tr>
     <tr id="search_blank_line"><td>&nbsp;</td></tr>
 </table>
